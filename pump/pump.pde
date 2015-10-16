@@ -30,11 +30,12 @@ void draw() {
     if(posx[i]>width) {
       velx[i]*=-1;
     }
-    if(posy[i]>=height-5||posy[i]<=5) {
+    if(posy[i]>=height-5||posy[i]<mouseY) {
       vely[i]*=-1;
     }
   }
   stroke(0);
   strokeWeight(10);
   line(mouseX,0,mouseX,height);
+  line(0,mouseY,width,mouseY);
 }
